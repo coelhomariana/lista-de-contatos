@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "./src/components/Header";
+import PeopleList from "./src/components/PeopleList";
 import axios from "axios";
 
 export default class App extends React.Component {
@@ -36,7 +37,7 @@ export default class App extends React.Component {
     return (
       <View>
         <Header title="Pessoas"></Header>
-        {this.renderList()}
+        <PeopleList people={this.state.people} />
       </View>
     );
   }
